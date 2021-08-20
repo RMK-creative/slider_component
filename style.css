@@ -34,7 +34,7 @@ body {
   }
 
   .swiper-slide:first-child {
-    margin-left: 2rem;
+    margin-left: 10rem;
   }
 }
 
@@ -50,4 +50,14 @@ body {
 
 .swiper-scrollbar {
   display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f3603c;
+  font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+  background: #f3603c;
 }
