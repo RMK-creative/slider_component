@@ -1,63 +1,107 @@
-html {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SwiperJS Slider</title>
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
 
-body {
-  margin: 0;
-  padding: 0;
-}
+        <div class="swiper-slide">
+          <img src="avatar-anisha.png" alt="Anisha" class="slide-img" />
+          <h4 class="slide-name">Anisha Li</h4>
+          <p class="slide-text">
+            “Manage has supercharged our team’s workflow. The ability to
+            maintain visibility on larger milestones at all times keeps everyone
+            motivated.”
+          </p>
+        </div>
+        <div class="swiper-slide">
+          <img src="avatar-ali.png" alt="Ali" class="slide-img" />
+          <h4 class="slide-name">Ali Bravo</h4>
+          <p class="slide-text">
+            “We have been able to cancel so many other subscriptions since using
+            Manage. There is no more cross-channel confusion and everyone is
+            much more focused.”
+          </p>
+        </div>
 
-.swiper-container {
-  min-width: 100%;
-  height: 300px;
-}
+        <div class="swiper-slide">
+          <img src="avatar-richard.png" alt="Richard" class="slide-img" />
+          <h4 class="slide-name">Richard Watts</h4>
+          <p class="slide-text">
+            “Manage allows us to provide structure and process. It keeps us
+            organized and focused. I can’t stop recommending them to everyone I
+            talk to!”
+          </p>
+        </div>
+        <div class="swiper-slide">
+          <img src="avatar-shanai.png" alt="Shanai" class="slide-img" />
+          <h4 class="slide-name">Shanai Gough</h4>
+          <p class="slide-text">
+            “Their software allows us to track, manage and collaborate on our
+            projects from anywhere. It keeps the whole team in-sync without
+            being intrusive.”
+          </p>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
 
-/* card */
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 375px;
-  text-align: center;
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
 
-  display: block;
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
 
-  background: #fafafa;
-  gap: 1.5em;
-  margin-top: 4em;
-}
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
 
-@media (min-width: 1000px) {
-  .swiper-slide {
-    min-width: 400px;
-  }
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
 
-  .swiper-slide:first-child {
-    margin-left: 10rem;
-  }
-}
+        slidesPerView: 1,
+        spaceBetween: 1,
+        loop: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
 
-.slide-img {
-  width: 65px;
-  margin-top: -2.5rem;
-}
-
-.slide-text {
-  font-size: 0.75rem;
-  padding: 1rem 2rem;
-}
-
-.swiper-scrollbar {
-  display: none;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #f3603c;
-  font-size: 20px;
-}
-
-.swiper-pagination-bullet {
-  background: #f3603c;
-}
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
+  </body>
+</html>
