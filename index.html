@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SwiperJS Slider</title>
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+
+        <div class="swiper-slide">
+          <img src="avatar-anisha.png" alt="Anisha" class="slide-img" />
+          <h4 class="slide-name">Anisha Li</h4>
+          <p class="slide-text">
+            “Manage has supercharged our team’s workflow. The ability to
+            maintain visibility on larger milestones at all times keeps everyone
+            motivated.”
+          </p>
+        </div>
+        <div class="swiper-slide">
+          <img src="avatar-ali.png" alt="Ali" class="slide-img" />
+          <h4 class="slide-name">Ali Bravo</h4>
+          <p class="slide-text">
+            “We have been able to cancel so many other subscriptions since using
+            Manage. There is no more cross-channel confusion and everyone is
+            much more focused.”
+          </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="avatar-richard.png" alt="Richard" class="slide-img" />
+          <h4 class="slide-name">Richard Watts</h4>
+          <p class="slide-text">
+            “Manage allows us to provide structure and process. It keeps us
+            organized and focused. I can’t stop recommending them to everyone I
+            talk to!”
+          </p>
+        </div>
+        <div class="swiper-slide">
+          <img src="avatar-shanai.png" alt="Shanai" class="slide-img" />
+          <h4 class="slide-name">Shanai Gough</h4>
+          <p class="slide-text">
+            “Their software allows us to track, manage and collaborate on our
+            projects from anywhere. It keeps the whole team in-sync without
+            being intrusive.”
+          </p>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
+        spaceBetween: 1,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
+  </body>
+</html>
